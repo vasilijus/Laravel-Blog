@@ -53,3 +53,38 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+## Things to make te app work
+Create .env file 
+Create DB, and add credentials to .env
+
+```
+
+php artisan key:generate
+and resart your php artisan serve
+then it works
+```
+```
+language: php
+
+php:
+  - 5.6
+
+before_script:
+  - cp .env.travis .env
+  - mysql -e 'create database homestead_test;'
+  - composer self-update
+  - composer install --no-interaction
+  - php artisan migrate
+  - php artisan key:generate
+  - php artisan config:clear
+  - php artisan config:cache
+
+# script:
+# - phpunit
+```
+config/app.php
+
+    'key' => env('APP_KEY', $_ENV['APP_KEY']),
+
+    'cipher' => 'AES-256-CBC',
