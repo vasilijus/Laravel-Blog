@@ -91,9 +91,9 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `user_id`, `title`, `body`, `created_at`, `updated_at`) VALUES
-(1, 1, '1', 'qweqwe qwe qwe', '2018-03-31 16:42:48', '2018-03-31 16:42:48'),
-(2, 1, '2', 'qweqw', '2018-03-31 16:47:13', '2018-03-31 16:47:13'),
-(3, 1, '3', 'asd azxc asd qwe ve333333333333', '2018-03-31 19:14:45', '2018-03-31 19:14:45');
+(1, 1, 'About Php', 'This here should be loadded with PHP', '2018-03-31 16:42:48', '2018-03-31 16:42:48'),
+(2, 1, 'Test Post 2', 'Lorem Ipsum', '2018-03-31 16:47:13', '2018-03-31 16:47:13'),
+(3, 1, 'Test Post Number 3', 'Lorem Ipsum Lorem Ipsum', '2018-03-31 19:14:45', '2018-03-31 19:14:45');
 
 -- --------------------------------------------------------
 
